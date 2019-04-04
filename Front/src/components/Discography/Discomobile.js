@@ -14,7 +14,7 @@ import PropTypes from 'prop-types';
 /**
  * Code
  */
-const Discomobile = ({ discoImages, discoDatas }) => {
+const Discomobile = ({ discoRectos, discoVersos, discoDatas }) => {
   const settings = {
     infinite: true,
     speed: 500,
@@ -24,7 +24,7 @@ const Discomobile = ({ discoImages, discoDatas }) => {
 
   return (
     <Slider {...settings}>
-      {discoItems.map(disco => (
+      {discoDatas.map(disco => (
         <div key={disco.id} className="discomobile" {...disco}>
           <img className="discomobile-pic" src={disco.custom_fields.album_first_side} alt={disco.title.rendered} />
           <p className="discomobile-text">{disco.title.rendered}</p>

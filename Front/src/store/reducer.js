@@ -10,10 +10,8 @@ import { videoIds } from 'src/utils/videosUtil';
  */
 const initialState = {
   sectionTitles: [],
-  galery: [],
-  news: [],
-  sectionPictures: [],
   gallery: [],
+  news: [],
   videos: [],
   tourDates: [],
   loadedData: {
@@ -29,7 +27,8 @@ const initialState = {
   aboutLoaded: false,
   backgroundLoaded: false,
   titlesLoaded: false,
-  discoPics: [],
+  discoRectos: [],
+  discoVersos: [],
 };
 
 /**
@@ -49,8 +48,10 @@ export const RECEIVED_TOUR_DATES = 'RECEIVED_TOUR_DATES';
 // DISCO Export
 export const LOAD_SECTION_DISCO = 'LOAD_DISCO_NAME';
 export const RECEIVED_SECTION_DISCO = 'RECEIVED_SECTION_DISCO';
-export const LOAD_DISCO_PICS = 'LOAD_DISCO_PICS';
-export const RECEIVED_DISCO_PICS = 'RECEIVED_DISCO_PICS';
+export const LOAD_DISCO_RECTOS = 'LOAD_DISCO_RECTOS';
+export const RECEIVED_DISCO_RECTOS = 'RECEIVED_DISCO_RECTOS';
+export const LOAD_DISCO_VERSOS = 'LOAD_DISCO_VERSOS';
+export const RECEIVED_DISCO_VERSOS = 'RECEIVED_DISCO_VERSOS';
 // Media Import
 export const LOAD_VIDEOS = 'LOAD_VIDEOS';
 export const RECEIVED_VIDEOS = 'RECEIVED_VIDEOS';
@@ -133,15 +134,26 @@ const reducer = (state = initialState, action = {}) => {
         sectionDisco: action.data,
       };
 
-    case LOAD_DISCO_PICS:
+    case LOAD_DISCO_RECTOS:
       return {
         ...state,
       };
 
-    case RECEIVED_DISCO_PICS:
+    case RECEIVED_DISCO_RECTOS:
       return {
         ...state,
-        discoPics: action.data,
+        discoRectos: action.data,
+      };
+
+    case LOAD_DISCO_VERSOS:
+      return {
+        ...state,
+      };
+
+    case RECEIVED_DISCO_VERSOS:
+      return {
+        ...state,
+        discoVersos: action.data,
       };
 
       // ABOUT SECTION
@@ -276,12 +288,21 @@ export const receivedSectionDisco = data => ({
   data,
 });
 
-export const loadDiscoPics = () => ({
-  type: LOAD_DISCO_PICS,
+export const loadDiscoRectos = () => ({
+  type: LOAD_DISCO_RECTOS,
 });
 
-export const receivedDiscoPics = data => ({
-  type: RECEIVED_DISCO_PICS,
+export const receiveddiscoRectos = data => ({
+  type: RECEIVED_DISCO_RECTOS,
+  data,
+});
+
+export const loadDiscoVersos = () => ({
+  type: LOAD_DISCO_VERSOS,
+});
+
+export const receiveddiscoVersos = data => ({
+  type: RECEIVED_DISCO_VERSOS,
   data,
 });
 

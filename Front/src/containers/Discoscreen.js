@@ -23,14 +23,14 @@ import Discoscreen from 'src/components/Discography/Discoscreen';
 // const mapStateToProps = (state) => {
 //   const {
 //     sectionDisco,
-//     discoPics,
+//     discoRectos,
 //   } = state;
 //   const unitedDiscos = [];
 //   let i = 0;
 //   for (i = 0; i < sectionDisco.length; i += 1) {
 //     const unitedDisco = {
 //       Discodata: sectionDisco[i],
-//       Discopics: discoPics[i],
+//       discoRectos: discoRectos[i],
 //     };
 //     unitedDiscos.push(unitedDisco);
 //   }
@@ -42,7 +42,7 @@ import Discoscreen from 'src/components/Discography/Discoscreen';
 // };
 
 const mapStateToProps = state => ({
-  discoImages: state.discoPics,
+  discoImages: state.discoRectos,
   discoDatas: state.sectionDisco,
 });
 

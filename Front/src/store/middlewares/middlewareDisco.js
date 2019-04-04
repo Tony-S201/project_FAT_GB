@@ -7,8 +7,10 @@ import axios from 'axios';
 import {
   LOAD_SECTION_DISCO,
   receivedSectionDisco,
-  LOAD_DISCO_PICS,
-  receivedDiscoPics,
+  LOAD_DISCO_RECTOS,
+  receiveddiscoRectos,
+  LOAD_DISCO_VERSOS,
+  receiveddiscoVersos,
 } from 'src/store/reducer';
 
 const middlewareDisco = store => next => (action) => {
@@ -24,11 +26,22 @@ const middlewareDisco = store => next => (action) => {
         ));
       break;
 
-    case LOAD_DISCO_PICS:
+    case LOAD_DISCO_RECTOS:
       axios
         .get('http://92.243.8.90/fat/back/wp-json/fat/v1/discography/recto')
         .then(({ data }) => {
-          store.dispatch(receivedDiscoPics(data));
+          store.dispatch(receiveddiscoRectos(data));
+        })
+        .catch(() => (
+          console.log('Hoooooooooo !')
+        ));
+      break;
+
+    case LOAD_DISCO_VERSOS:
+      axios
+        .get('http://92.243.8.90/fat/back/wp-json/fat/v1/discography/recto')
+        .then(({ data }) => {
+          store.dispatch(receiveddiscoVersos(data));
         })
         .catch(() => (
           console.log('Hoooooooooo !')
