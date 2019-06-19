@@ -19,7 +19,9 @@
     "file-loader": "*",
     "html-webpack-plugin": "*",
     "ignore-styles": "*",
+    "jest": "^24.8.0",
     "mini-css-extract-plugin": "*",
+    "mocha": "^6.1.4",
     "node-sass": "*",
     "optimize-css-assets-webpack-plugin": "*",
     "postcss": "*",
@@ -34,6 +36,7 @@
     "webpack-dev-server": "*"
   },
   "scripts": {
+    "test": "jest",
     "start": "webpack-dev-server",
     "clean": "rm -rf dist",
     "clean:all": "rm -rf dist node_modules",

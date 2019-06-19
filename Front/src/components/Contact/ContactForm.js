@@ -13,6 +13,7 @@ import axios from 'axios';
 /**
  * Code
  */
+
 class ContactForm extends React.Component {
   state = {
     contactSelect: '',
@@ -45,10 +46,11 @@ class ContactForm extends React.Component {
         });
       })
       .catch(error => this.setState({ error: error.message }));
-  }
-
-  render() {
-    return (
+    }
+    
+    
+    render() {
+      return (
       <div id="contact-form">
         <form action="">
           <h3 id="title-form">Vous pouvez contacter le groupe ici :</h3>

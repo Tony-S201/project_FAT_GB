@@ -15,6 +15,7 @@ export const cleanTourDates = (tourDate) => {
   newDates = sortBy(newDates, ['date']);
 
   return newDates;
+
 };
 
 export const upCommingShow = (date) => {
