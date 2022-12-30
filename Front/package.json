@@ -21,7 +21,7 @@
     "ignore-styles": "*",
     "jest": "^24.8.0",
     "mini-css-extract-plugin": "*",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "node-sass": "*",
     "optimize-css-assets-webpack-plugin": "*",
     "postcss": "*",
